@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+/* font-family: 'Space Mono', monospace; */
+
+:root {
+    
+    --Strong-cyan: hsl(172, 67%, 45%); /* Primary */
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan1: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --Light-grayish-cyan1: hsl(185, 41%, 84%);
+    --Light-grayish-cyan2: hsl(189, 41%, 97%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1440px;
+    background-color: var(--Light-grayish-cyan1);
+    font-family: 'Space Mono', monospace;
+    height: 131vh;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+    width: 125px;
+    height: 80px;
+    margin-top: 152px;
+    margin-bottom: 74px;
+    letter-spacing: 10px;
+    font-size: 12px;
+    color: var(--Dark-grayish-cyan1);
+}
+
+main {
+    display: flex;
+    width: 921px;
+    height: 482px;
+    background-color: white;
+    margin: auto;
+    border-radius: 27px;
+}
+
+.calculator {
+    margin-left: 47px;
+    margin-top: 43px;
+    margin-right: 49px;
+}
+
+#bill, #select-tip {
+    margin-bottom: 41px;
+}
+
+.bill-customize, .people-box {
+    display: flex;
+    width: 379px;
+    height: 47px;
+    background-color: var(--Light-grayish-cyan2);
+    margin-top: 5px;
+}
+
+input[type="text"] {
+    border: 0;
+    color: var(--Very-dark-cyan);
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    padding-right: 18px;
+}
+
+.card {
+    background-color: var(--Very-dark-cyan);
+    width: 116px;
+    height: 47px;
+    color: white;
+    border-radius: 5px;
+}
+
+.card:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ---- for insert svg/content to input ------ */
+
+#label1 {
+    position: relative;
+}
+
+#label1::after {
+    content: "$";
+    position: absolute;
+    left: 19px;
+    top: 14px;
+    bottom: 50px;
+    width: 20px;
+    font-size: 23px;
+    color: var(--Dark-grayish-cyan2);
+}
+
+#label2 {
+    position: relative;
+}
+
+#label2::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0px;
+    bottom: -51px;
+    width: 14px;
+    background: url(images/icon-person.svg) center / contain no-repeat;
+}
+
+/* ---- End ------
+
+/* Styling form input for Bill Customize */
+
+input[type="Customize"] {
+    background-color: white;
+    border: 0;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.5em;
+    width: 116px;
+    height: 47px;
+    border-radius: 5px;
+    color: var(--Very-dark-cyan);
+    font-size: 24px;
+    padding-right: 18px;
+}
+
+input[type="text"]:focus, input[type="Customize"]:focus {
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 2pt var(--Strong-cyan);
+}
+
+input[type="Customize"]:focus::placeholder {
+    color: transparent;
+}
+
+/* End */
+
+#bill > h4, #select-tip > h4 {
+    color: var(--Dark-grayish-cyan1);
+}
+
+.header-label {
+    color: var(--Dark-grayish-cyan1);
+    display: flex;
+}
+
+#error {
+    margin-left: auto;
+    display: none;
+    color: rgb(209 81 72);
+}
+
+.input-people {
+    display: flex;
+    width: 379px;
+    height: 47px;
+    background-color: var(--Light-grayish-cyan2);
+    margin-top: 5px;
+}
+
+.top-tip, .bottom-tip {
+    display: flex;
+    margin-top: 17px;
+    text-align: center;
+}
+
+#custom {
+    color: var(--Dark-grayish-cyan1);
+    background-color: white;
+}
+
+.card > h2 {
+    margin-top: 5px;
+}
+
+.tip-1, .tip-2, .tip-4, .tip-5 {
+    margin-right: 16px;
+}
+
+#icon {
+    width: 13px;
+    height: 18px;
+    margin-left: 18px;
+    margin-top: 19px;
+}
+
+.people-box > h3 {
+    margin-top: 19px;
+}
+
+.desc {
+    background-color: var(--Very-dark-cyan);
+    height: 418px;
+    width: 411px;
+    border-radius: 15px;
+    margin-top: 31px;
+}
+
+#tip-amount, #total {
+    display: flex;
+    margin-left: 39px;
+    width: 330px;
+}
+
+#tip-amount {
+    margin-top: 43px;
+    margin-bottom: 28px;
+}
+
+#total {
+    margin-bottom: 116px;
+}
+
+.harga {
+    margin-left: auto;
+    color: var(--Strong-cyan);
+    display: flex;
+}
+
+.harga > h1 {
+    font-size: 44px;
+}
+
+#tip-amount-desc, #total-desc {
+    padding-top: 14px;
+}
+
+#tip-amount-desc > h4, #total-desc > h4 {
+    color: white;
+}
+
+#tip-amount-desc > p, #total-desc > p {
+    color: var(--Dark-grayish-cyan2);
+    font-size: 13px;
+}
+
+.reset-button {
+    height: 48px;
+    width: 329px;
+    background-color: var(--Strong-cyan);
+    margin-left: 39px;
+    color: var(--Very-dark-cyan);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.reset-button > h3 {
+    padding-top: 10px;
+}
+
+.reset-button:hover {
+    background-color: var(--Light-grayish-cyan1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 375px) {
+    body {
+        width: 375px;
+    }
+
+    header {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    main {
+        flex-direction: column;
+        width: 375px;
+        height: 824px;
+    }
+
+    .calculator {
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+
+    .bill-customize, .input-people {
+        width: 320px;
+    }
+
+    .top-tip, .bottom-tip {
+        flex-direction: column;
+        width: 157px;
+        float: left;
+    }
+
+    .tip-4, .tip-5, .tip-6 {
+        margin-left: 14px;
+    }
+
+    #select-tip {
+        height: 223px;
+        margin-bottom: 29px;
+    }
+ 
+    .card {
+        width: 145px;
+        margin-bottom: 20px;
+    }
+
+    .desc {
+        width: 328px;
+        margin: auto;
+        height: 259px;
+        margin-top: 30px;
+    }
+
+    #tip-amount {
+        margin-top: 25px;
+    }
+
+    #tip-amount, #total {
+        margin-left: 23px;
+        margin-bottom: 10px;
+        width: 283px;
+    }
+
+    .harga > h1 {
+        font-size: 35px;
+    }
+
+    #total {
+        margin-bottom: 24px;
+    }
+
+    .reset-button {
+        margin: auto;
+        width: 283px;
+    }
+}
