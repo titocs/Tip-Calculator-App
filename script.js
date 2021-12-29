@@ -72,7 +72,7 @@ function displayError(){
     people.style.borderRadius = "5px";
 }
 
-people.addEventListener("focusout", function(){
+people.addEventListener("input", function(){
     if(this.value == 0)
         displayError();
     else{
