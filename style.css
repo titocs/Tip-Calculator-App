@@ -171,6 +171,11 @@ input[type="Customize"]:focus::placeholder {
     margin-top: 5px;
 }
 
+.warna {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
 .top-tip, .bottom-tip {
     display: flex;
     margin-top: 17px;
