@@ -41,10 +41,16 @@ function getTotal(Value_bill, Divisor, TipAmount){
 
 var Percentage_temp, Multiple, Final;
 for(let i=0; i<card.length; i++){
-    card[i].addEventListener("click", function(){
+    card[i].addEventListener("click", function(e){
         Percentage_temp = convertPercent(card[i].firstChild.nextSibling.innerHTML);
         Multiple = countPercent(Percentage_temp, billValue.value);
         Final = countFinal(Multiple, people.value);
+        for(let i=0; i<card.length; i++){
+            if(card[i].classList.contains("warna")){
+                card[i].classList.remove("warna");
+            }
+        }
+        card[i].classList.add("warna");
         displayTip();
     });
 }
