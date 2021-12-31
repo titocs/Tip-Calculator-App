@@ -18,7 +18,6 @@
 }
 
 body {
-    width: 1440px;
     background-color: var(--Light-grayish-cyan1);
     font-family: 'Space Mono', monospace;
     height: 131vh;
